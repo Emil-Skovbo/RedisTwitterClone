@@ -20,7 +20,7 @@ public class FollowUserIT extends TestBase {
         um.createUser(benny);
 
         // Act
-        var result = um.followUser(albert.username, albert.username);
+        var result = um.followUser(albert.username, benny.username);
 
         // Assert
         assertTrue(result);

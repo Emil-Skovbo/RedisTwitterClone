@@ -55,7 +55,7 @@ public class TestBase {
         um = new UserManagementImpl(jedis);
         pm = new PostManagementImpl(jedis, time);
 
-        throw new RuntimeException("Read the warning above");
+        //throw new RuntimeException("Read the warning above");
     }
 
     @BeforeEach
@@ -79,4 +79,3 @@ public class TestBase {
         return new UserCreation("den","Dennis", "Olsen", "uhcah834", "1982-06-06");
     }
 }
-

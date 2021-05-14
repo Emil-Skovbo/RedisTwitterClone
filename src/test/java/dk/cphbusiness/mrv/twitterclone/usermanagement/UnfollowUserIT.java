@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class UnfollowUserIT extends TestBase {
     @Test
@@ -20,6 +19,7 @@ public class UnfollowUserIT extends TestBase {
         um.createUser(carl);
         um.followUser(albert.username, benny.username);
         um.followUser(albert.username, carl.username);
+        assertEquals(2,um.getFollowedUsers(albert.username).size());
         assertTrue(um.getFollowedUsers(albert.username).containsAll(List.of(benny.username, carl.username)));
 
         // Act
